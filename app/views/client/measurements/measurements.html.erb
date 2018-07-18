@@ -1,0 +1,65 @@
+<h1>Let's get started! Enter your measurements here!</h1>
+
+  <% if @errors %>
+    <ul>
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= form_tag "/client/measurements", method: :post do %>
+
+    <div>
+      Name: <input type="text" name="name" value=""/>
+    </div>
+
+    <div>
+      Height: <input type="text" name="height" value=""/>
+    </div>
+
+    <div>
+      Chest <input type="text" name="chest" value=""/>
+    </div>
+
+    <div>
+      Waist: <input type="text" name="waist" value=""/>
+    </div>
+
+    <div>
+      Hips: <input type="text" name="hips" value=""/>
+    </div>
+
+    <div>
+      Thigh: <input type="text" name="thigh" value=""/>
+    </div>
+
+    <div>
+      Calf: <input type="text" name="calf" value=""/>
+    </div>
+
+    <div>
+      Inseam: <input type="text" name="inseam" value=""/>
+    </div>
+
+    <div>
+      Upper-Arm Circumference: <input type="text" name="upper_arm_circumference" value=""/>
+    </div>
+
+    <div>
+      Arm Length: <input type="text" name="arm_length" value=""/>
+    </div>
+
+    <div>
+      Shoulder to Shoulder Width: <input type="text" name="shoulder_to_shoulder_width" value=""/>
+    </div>
+
+    <div>
+      Armpit to Waist: <input type="text" name="armpit_to_waist" value=""/>
+    </div>
+
+    <div>
+      Waist to Hip: <input type="text" name="waist_to_hip" value=""/>
+    </div>
+
+    <input type="submit" name="" value="Submit Measurements"/>
+  <% end %>
